@@ -22,3 +22,17 @@ node.jsのインストールTips
   → ローカルインストールで、dependencies（本番でも使うパッケージ）と処理される
 ・npm install --save-dev stepci
   → ローカルインストールで、devDependencies（開発中だけ使うパッケージ）と処理される
+
+npmでインストールしたツールの実行方法
+  → npmでは、インストール方法によって実行方法が異なる
+・グローバルインストール
+stepci --version
+
+・ローカルインストール
+npx stepci --version
+  → ローカルインストールしたツールを実行するには、npxコマンドを使う
+  → しかし、コマンドが長くなるので「npm scripts」というnpmの機能を使うと、コマンドを短い入力で実行できる
+→ npm run test:api
+
+npx stepci run stepci/workflow.yml
+  → stepciの実行
