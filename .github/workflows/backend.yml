@@ -28,6 +28,8 @@ jobs:
       # buildしたファイルに移動
       - run: node dist/index.js &
       # & はnode dist/index.jsをバックグラウンドで起動して、その実行中に別のコマンドを起動できるようにする
+
+      - run: npx wait-on -t 10000 http://localhost:8080/api/health
       - run: npm run test:api
 
       - uses: actions/upload-artifact@v3
