@@ -25,6 +25,11 @@ jobs:
       - run: npm run test -- --coverage
       - run: npm run build
 
+      # buildしたファイルに移動
+      - run: node dist/index.js &
+      # & はnode dist/index.jsをバックグラウンドで起動して、その実行中に別のコマンドを起動できるようにする
+      - run: npm run test:api
+
       - uses: actions/upload-artifact@v3
         if: always()
         with:
