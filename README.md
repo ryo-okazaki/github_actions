@@ -1,3 +1,6 @@
+# ステータス
+[![backend](https://github.com/ryo-okazaki/github_actions/actions/workflows/backend.yml/badge.svg)](https://github.com/ryo-okazaki/github_actions/actions/workflows/backend.yml)
+
 # 参考
 https://www.udemy.com/course/cicd-with-github-actions/learn/lecture/36059238#questions
 
