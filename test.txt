@@ -36,3 +36,8 @@ npx stepci --version
 
 npx stepci run stepci/workflow.yml
   → stepciの実行
+
+
+アプリケーションの起動を待つ方法
+・wait for itやwait forなどのシェルスクリプトを使う
+・node.jsのパッケージのwait-onを使う
