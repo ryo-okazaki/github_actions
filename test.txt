@@ -6,3 +6,4 @@ actions/*
 
 npm run test -- --coverage
 
+ifの設定で、コマンドの実行が失敗しても後続の処理を行う分岐ができる
