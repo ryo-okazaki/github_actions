@@ -41,3 +41,24 @@ npx stepci run stepci/workflow.yml
 アプリケーションの起動を待つ方法
 ・wait for itやwait forなどのシェルスクリプトを使う
 ・node.jsのパッケージのwait-onを使う
+
+・プロセスの確認
+ps aux
+・使用しているポートの確認
+sudo ss -antup
+
+・木構造で表示
+pstree -p
+
+Linux
+systemdの設定ファイルに従って、起動している
+nodeコマンドもsystemdに起動してもらうのが望ましい
+→ 何かの拍子で停止しても自動的に再実行してくれる、アプリケーションが出力したログを管理
+
+/etc/systemd/system/
+
+systemd設定ファイルの再読み込み
+sudo systemctl daemon-reload
+
+・ログの見方
+journalctl -u backend
